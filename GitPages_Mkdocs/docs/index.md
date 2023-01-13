@@ -5,7 +5,7 @@ hide:
 ---
 
 # 2022-2-Certifik8
-
+---
 <center>
 
 [![Contributors](https://img.shields.io/github/contributors/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/graphs/contributors)
@@ -53,17 +53,18 @@ Gerador Automático de Certificados
     </li>
     <li><a href="#Funcionalidade">🤖 Funcionalidade</a></li>
     <li><a href="#Requisitos">❗ Requisitos</a></li>
-    <li><a href="#Como-rodar">🛞 Como rodar</a></li>
+    <li><a href="#Como-rodar">🛞 Como executar</a></li>
     <li><a href="#Devenvolvedores">👨‍💻 Desenvolvedores</a></li>
   </ol>
 </details>
 
 ## 📝 Sobre o projeto
+---
 
 Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento. 
 
 ## 💻 Tecnologias
-
+---
 #### Tecnologias utilizadas neste projeto:
 
 <p align="center">
@@ -73,6 +74,7 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 </p>
 
 ## 🤖 Funcionalidade
+---
 O Certifik8 necessita de duas entradas de dados, uma tabela (Excel) no formato XLSX, e dados gerais sobre o evento. Para cada conjunto de informações passadas, um documento com um modelo já preestabelecido é gerado. Os certificados em formato PDF são salvos diretamente na pasta Downloads do computador do usuário.
 
 <center>
@@ -82,6 +84,7 @@ O Certifik8 necessita de duas entradas de dados, uma tabela (Excel) no formato X
 </center>
 
 ## ❗ Requisitos
+---
 O Certifik8 só funciona em sistemas operacionais Linux. 
 
 Testado no:
@@ -116,18 +119,19 @@ pip install pandas
 ```
 
   - **Instalar a ferramenta wkhtmltopdf**
-    ```
-    sudo apt install wkhtmltopdf
-    ```
+```
+sudo apt install wkhtmltopdf
+```
 
-## 🛞 Como rodar
+## 🛞 Como executar/rodar
+---
 ### **- 👩‍🦰 Usuário**
-1. **Instalando o Certifik8:**
+1.**Instalando o Certifik8:**
 ```
 pip install -i https://test.pypi.org/simple/ Certifik8==0.0.2
 ```
 
-2. **Digite o comando para obter o endereço da biblioteca:**
+2.**Digite o comando para obter o endereço da biblioteca:**
 ```
 pip show Certifik8 
 ```
@@ -135,7 +139,8 @@ pip show Certifik8
 <center>
 
 <center>
-![Certifik8](img/pip-show.png){width="500" height="300"}
+
+![pip-show](img/pip-show.png){width="500" height="300"}
 
 </center>
 
@@ -146,45 +151,53 @@ Copie o endereço após a "Location", marcado de vermelho na imagem.
 </center>
 </center>
 
-3. **Rodando a aplicação:**
- ```
- python3 {endereço_biblioteca}/Certifik8/main.py
- ```
-<div align="center">
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/path-image.png" width="762" height="95">
+3.**Executando a aplicação:**
+```
+python3 {endereço_biblioteca}/Certifik8/main.py
+```
+
+<center>
+
+![Path-image](img/path-image.png){width="762" height="95"}
 
 Substitua a chave {endereço_biblioteca} pelo endereço copiado no passo 2.
-</div>
 
-4. **Insira os dados conforme pedido:**
+</center>
+
+4.**Insira os dados conforme pedido:**
 
 * O endereço da tabela deve ser absoluto.
 
 * Estrutura da tabela Excel ([Exemplo](docs/exemplo/exemplo.xlsx)): 
-  - Obs: a tabela deve seguir essa estrutura obrigatoriamente.
-    | 1  | Nome | cpf | Função | Frequência |
-    |---|------|-----|--------|------------|
-    | 2 | Samuel Barbosa Alves | 729.334.326-41 | PARTICIPANTE | 100 |
-    | 3 | Melissa Ribeiro Araujo | 201.544.482-30 | MONITOR | 97 |
-    | 4 | Gabrielly Rodrigues Castro | 451.016.912-40 | PARTICIPANTE | 80 |
-    | ... | ... | ... | ... | ... |
-  
+- Obs: a tabela deve seguir essa estrutura obrigatoriamente.
 
-<div align="center">
+<center>
+
+| 1 | Nome | cpf | Função | Frequência |
+|:---:|:------:|:-----:|:--------:|:------------:|
+| 2 | Samuel Barbosa Alves | 729.334.326-41 | PARTICIPANTE | 100 |
+| 3 | Melissa Ribeiro Araujo | 201.544.482-30 | MONITOR | 97 |
+| 4 | Gabrielly Rodrigues Castro | 451.016.912-40 | PARTICIPANTE | 80 |
+| ... | ... | ... | ... | ... |
+
+</center>
+
+
+<center>
 
 *Demonstração de funcionalidade.*
 
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/demonstracao.png" width="500" height="300">
+![Path-image](img/demonstracao.png){width="500" height="300"}
 
-</div>
+</center>
 
 ### **- 🧙🏼‍♀️ Desenvolvimento local**
-1. **Clone o repositório**
+1.**Clone o repositório**
 ```
 git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 ```
 
-2. **Rode os comando:**
+2.**Rode os comandos:**
 
 ```
 sudo docker build -t squad08

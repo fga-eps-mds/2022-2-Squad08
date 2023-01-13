@@ -23,5 +23,5 @@ theme:
         scheme: slate
         primary: purple
     
-    logo: assets/icons/Certifik8.ico
+    logo: img/logo.png
 
