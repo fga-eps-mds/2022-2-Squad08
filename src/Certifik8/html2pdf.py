@@ -14,11 +14,11 @@ class Html2Pdf:
 
     def convert(self, output_name, foldername) -> None:
         download_folder = self.get_download_path()
-        
+
         new_path = download_folder + f"{foldername}"
         if not os.path.exists(new_path):
             os.makedirs(new_path)
-        
+
         pdfkit.from_file(
             self.html2pdf, new_path + f"/{output_name}.pdf", options=self.options
         )
