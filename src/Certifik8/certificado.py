@@ -13,13 +13,15 @@ html_doc = """
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Template</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url(
+        'https://fonts.googleapis.com/css2?family=Roboto&display=swap');
         main{
             position: relative;
             width: 1096px;
             height: 748px;
             font-family: 'Roboto', sans-serif;
-            background-image: url(https://cdn.discordapp.com/attachments/1034883038586351647/1049011662566465546/template.png);
+            background-image: url(
+            https://cdn.discordapp.com/attachments/1034883038586351647/1049011662566465546/template.png);
         }
         #texto_principal{
             position: absolute;
@@ -29,9 +31,14 @@ html_doc = """
             text-align: justify;
             font-size: 18px;
             font-weight: 700;
-        
         }
-        .nome_participante, .cpf_participante, .nome_evento, .nome_prof, .nome_dep, .cargo_participante, .frequencia_participante{
+        .nome_participante, 
+        .cpf_participante, 
+        .nome_evento, 
+        .nome_prof, 
+        .nome_dep, 
+        .cargo_participante, 
+        .frequencia_participante{
             text-transform: uppercase;
         }
         #local_data{
@@ -60,11 +67,15 @@ html_doc = """
 </head>
 <body>
     <main>
-        <p id="texto_principal">Certificamos que, <span class="nome_participante"></span>, CPF <span class="cpf_participante"></span>, participou do
-            evento de extensão <span class="nome_evento"></span>, com carga horária de <span class="carga_hor"></span>
+        <p id="texto_principal">Certificamos que, <span class="nome_participante"></span>, CPF 
+            <span class="cpf_participante"></span>, participou do
+            evento de extensão <span class="nome_evento"></span>, com carga horária de 
+            <span class="carga_hor"></span>
             hora(s), coordenado pelo(a) Professor(a) <span class="nome_prof"></span>, promovido
-            pelo(a) <span class="nome_dep"></span>, na função de <span class="cargo_participante"></span>,
-            com frequência <span class="frequencia_participante"></span>%. A atividade foi realizada no período de <span class="data_inicial"></span> a
+            pelo(a) <span class="nome_dep"></span>, na função de 
+            <span class="cargo_participante"></span>,
+            com frequência <span class="frequencia_participante"></span>%. 
+            A atividade foi realizada no período de <span class="data_inicial"></span> a
             <span class="data_final">***</span>.
         </p>
         <p id="local_data">Brasília, <span class="data_emissao"></span></p>
@@ -91,7 +102,7 @@ class Certificados:
     ):
         try:
             df = self.xlsx_content(filepath)
-        except:
+        except Exception as error:
             pass
 
         def separarTabela(self, df):
