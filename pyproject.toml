@@ -31,4 +31,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-certifik8 = 'Certifik8.modules.main:run'
+certifik8 = 'Certifik8.main:run'
