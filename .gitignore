@@ -1,2 +1,4 @@
-# Ignora todos os arquivos de Tabelas
-*2022-2-Squad08/.xlsx
+dist/
+Certifik8.egg-info/
+src/Certifik8/__pycache__/
+poetry.lock
