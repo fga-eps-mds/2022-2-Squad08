@@ -11,7 +11,7 @@ authors = [
     "Geovane <galefreitas@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "src/Certifik8"}]
+packages = [{include = "Certifik8"}]
 repository = "https://github.com/fga-eps-mds/Certifik8"
 
 [tool.poetry.dependencies]
@@ -31,4 +31,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-certifik8 = 'src.Certifik8.main:run'
+certifik8 = 'Certifik8.modules.main:run'

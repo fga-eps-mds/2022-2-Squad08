@@ -1,14 +1,19 @@
-from src.Certifik8.certificado import Certificados
 from tkinter import filedialog
 import os
+from Certifik8.modules.certificado import Certificados
 
 
 def run():
-    certificados = Certificados()
-
+    with open('../constants/logo.txt', encoding="utf-8") as text:
+        logo = text.read()
+    print(logo)
     print(
-        "Bem-vindo ao Certifik8, gerador de certificados da Semana Universitária da UnB"
+        "Bem-vindo ao Certifik8, gerador de " +
+        "certificados da Semana Universitária da UnB"
     )
+    print("Escolha as tabelas:")
+
+    certificados = Certificados()
 
     paths = filedialog.askopenfilenames()
 
