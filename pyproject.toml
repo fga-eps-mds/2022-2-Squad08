@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "certifik8"
-version = "0.2.1"
+name = "certifikadas8"
+version = "0.1.1"
 description = "Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento."
 authors = [
     "Victorio <victorio.lazaro15@gmail.com>",
