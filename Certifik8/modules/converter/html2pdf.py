@@ -1,6 +1,5 @@
 import os
 import pdfkit
-from ..utils import get_download_path
 
 
 class Html2Pdf:
@@ -18,7 +17,7 @@ class Html2Pdf:
         os.makedirs(self.new_path)
 
     def convert(self, output_name, foldername) -> None:
-        download_folder = get_download_path()
+        download_folder = os.path.join(os.path.expanduser("~"), "Downloads/")
 
         self.new_path = download_folder + f"{foldername}"
         if not os.path.exists(self.new_path):

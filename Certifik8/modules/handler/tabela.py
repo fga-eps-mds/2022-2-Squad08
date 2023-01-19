@@ -2,7 +2,7 @@ import pandas as pd
 
 
 class Tabela:
-    def __init__(self, ):
+    def __init__(self):
         self.data_frame = None
         self.data_frame_informacoes = None
         self.path = None

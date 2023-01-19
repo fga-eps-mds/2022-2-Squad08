@@ -26,7 +26,3 @@ def get_data() -> str:
 
 def get_foldername(filepath):
     return filepath.split("/")[-1].split(".")[0]
-
-
-def get_download_path():
-    return os.path.join(os.path.expanduser("~"), "Downloads/")
