@@ -1,4 +1,3 @@
-import os
 from bs4 import BeautifulSoup
 from ..converter.html2pdf import Html2Pdf
 from ..utils import get_data, get_foldername
@@ -48,9 +47,7 @@ class Certificados:
                 file.writelines(self.soup.prettify())
 
             foldername = get_foldername(filepath)
-
             html2pdf = Html2Pdf(
                 html=dados_certificado["nome_participante"] + ".html")
             html2pdf.convert(
                 dados_certificado["nome_participante"], foldername)
-            os.remove(dados_certificado["nome_participante"] + ".html")
