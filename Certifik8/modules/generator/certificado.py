@@ -2,12 +2,13 @@ import os
 from bs4 import BeautifulSoup
 from ..converter.html2pdf import Html2Pdf
 from ..utils import get_data, get_foldername
+from ...path import path_inicial
 
 
 class Certificados:
     def __init__(self):
         with open(
-            file="./constants/template.html",
+            file=path_inicial + "/constants/template.html",
             encoding="utf-8",
         ) as html:
             self.template = html.read()
@@ -48,6 +49,8 @@ class Certificados:
 
             foldername = get_foldername(filepath)
 
-            html2pdf = Html2Pdf(html=dados_certificado["nome_participante"] + ".html")
-            html2pdf.convert(dados_certificado["nome_participante"], foldername)
+            html2pdf = Html2Pdf(
+                html=dados_certificado["nome_participante"] + ".html")
+            html2pdf.convert(
+                dados_certificado["nome_participante"], foldername)
             os.remove(dados_certificado["nome_participante"] + ".html")

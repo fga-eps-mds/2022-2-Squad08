@@ -21,7 +21,6 @@ setuptools = "65.6.3"
 Pillow = "9.3.0"
 PyPDF2 = "2.11.1"
 pdfkit = "1.0.0"
-pendulum = "^2.1.2"
 beautifulsoup4 = "^4.11.1"
 openpyxl = "^3.0.10"
 

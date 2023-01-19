@@ -2,11 +2,12 @@ from tkinter import filedialog
 import os
 from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
+from .path import path_inicial
 
 
 def run():
     with open(
-        file="./constants/menu.txt",
+        file=path_inicial + "/constants/menu.txt",
         encoding="utf-8",
     ) as text:
         menu = text.read()
