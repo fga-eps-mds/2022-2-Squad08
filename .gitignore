@@ -2,4 +2,6 @@ dist/
 Certifik8.egg-info/
 Certifik8/__pycache__/
 Certifik8/constants/__pycache__/
+Certifik8/modules/__pycache__/
+Certifik8/modules/generator/__pycache__/
 poetry.lock
