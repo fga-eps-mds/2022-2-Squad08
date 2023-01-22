@@ -1,5 +1,5 @@
-from ..modules.handler.tabela import Tabela
 from Certifik8.path import path_inicial
+from ..modules.handler.tabela import Tabela
 
 
 tabela = Tabela()
