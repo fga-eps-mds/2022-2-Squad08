@@ -1,4 +1,5 @@
 from datetime import date
+import os
 
 meses = (
     "Janeiro",
@@ -25,3 +26,7 @@ def get_data() -> str:
 
 def get_foldername(filepath):
     return filepath.split("/")[-1].split(".")[0]
+
+
+def verificar_xlsx(path):
+    return os.path.exists(path) and os.path.splitext(path)[1] == ".xlsx"

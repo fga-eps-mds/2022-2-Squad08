@@ -12,22 +12,19 @@ class Tabela:
         try:
             self.data_frame = pd.read_excel(self.path)
 
+            self.separar_tabela(self.data_frame)
+
             self.data_frame.dropna(axis=0, how="all", inplace=True)
 
             self.data_frame.drop_duplicates(keep="first", inplace=True)
 
-            self.separar_tabela(self.data_frame)
-
             return True
         except ValueError:
-            print(
-                f"{self.path} - tabela vazia, "
-                "certificados não gerados!!!"
-            )
+            print(f"{self.path} - tabela vazia, " "certificados não gerados!!!")
             return False
         except KeyError:
             print(
-                f"{self.path} - coluna \"Informações\" inexistente, "
+                f'{self.path} - coluna "Informações" inexistente, '
                 "certificados não gerados!!!"
             )
             return False
@@ -63,13 +60,10 @@ class Tabela:
             return True
         except KeyError:
             print(
-                f"{self.path} - nem todos os campos da coluna \" Informações \""
+                f'{self.path} - nem todos os campos da coluna " Informações "'
                 "estão preenchidos, certificados não gerados!!!"
             )
             return False
         except IndexError:
-            print(
-                f"{self.path} - coluna está faltando, "
-                "certificados não gerados!!!"
-            )
+            print(f"{self.path} - coluna está faltando, " "certificados não gerados!!!")
             return False

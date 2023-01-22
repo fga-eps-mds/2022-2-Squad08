@@ -1,8 +1,8 @@
 from tkinter import filedialog
-import os
 from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
 from .path import path_inicial
+from .modules.utils import verificar_xlsx
 
 
 def run():
@@ -17,20 +17,22 @@ def run():
     paths = filedialog.askopenfilenames()
 
     for path in paths:
-        print('\t' + path)
+        print("\t" + path)
 
     print()
 
     certificados = Certificados()
     tabela = Tabela()
     for path in paths:
-        if os.path.exists(path) and os.path.splitext(path)[1] == ".xlsx":
+        if verificar_xlsx(path):
             if tabela.set_data_frames(path):
                 if tabela.verificar_tab_padrao():
                     certificados.gerar_certificados(
                         path,
                         tabela.get_data_frame(),
-                        tabela.get_data_frame_informacoes()
+                        tabela.get_data_frame_informacoes(),
                     )
         else:
             print(f"{path} - não é .xlsx, certificados não gerados!!!")
+
+    return True

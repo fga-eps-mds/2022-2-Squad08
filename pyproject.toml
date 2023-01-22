@@ -23,6 +23,7 @@ PyPDF2 = "2.11.1"
 pdfkit = "1.0.0"
 beautifulsoup4 = "^4.11.1"
 openpyxl = "^3.0.10"
+tqdm = "^4.64.1"
 
 
 [build-system]
