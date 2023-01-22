@@ -43,7 +43,7 @@ class Tabela:
     def verificar_tab_padrao(self):
         try:
             # pylint: disable=unused-variable
-            dados_padrao = {
+            dados_padrao = { # noqa
                 "nome_participante": self.data_frame["Nome"],
                 "cpf_participante": self.data_frame["CPF"],
                 "cargo_participante": self.data_frame["Função"],
