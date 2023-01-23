@@ -1,0 +1,2 @@
+[run]
+omit = Certifik8/tests/*,Certifik8/main.py
