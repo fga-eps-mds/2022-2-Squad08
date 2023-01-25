@@ -1,8 +1,8 @@
-from tkinter import filedialog
 from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
 from .path import path_inicial
 from .modules.utils import verificar_xlsx
+from .modules.selection.file_selection import FileSelection
 
 
 def run():
@@ -14,7 +14,7 @@ def run():
 
     print(menu)
 
-    paths = filedialog.askopenfilenames()
+    paths = FileSelection().run()
 
     for path in paths:
         print("\t" + path)
