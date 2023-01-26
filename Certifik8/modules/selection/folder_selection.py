@@ -2,7 +2,6 @@ import subprocess
 
 
 class FolderSelection:
-
     def __init__(self):
         self.command = ["zenity", "--file-selection", "--directory"]
 

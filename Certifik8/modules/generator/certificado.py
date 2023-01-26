@@ -22,7 +22,9 @@ class Certificados:
         except Exception:
             return False
 
-    def gerar_certificados(self, filepath, data_frame, data_frame_informacoes):
+    def gerar_certificados(
+        self, filepath, data_frame, data_frame_informacoes, path_destino
+    ):
         for i in tqdm(
             data_frame.index,
             ncols=100,
@@ -61,7 +63,9 @@ class Certificados:
                 html2pdf = Html2Pdf(
                     html=dados_certificado["nome_participante"] + ".html"
                 )
-                html2pdf.convert(dados_certificado["nome_participante"], foldername)
+                html2pdf.convert(
+                    dados_certificado["nome_participante"], foldername, path_destino
+                )
             except KeyboardInterrupt:
                 return False
             finally:

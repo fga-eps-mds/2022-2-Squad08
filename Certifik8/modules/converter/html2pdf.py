@@ -12,10 +12,9 @@ class Html2Pdf:
         }
         self.new_path = ""
 
-    def convert(self, output_name, foldername) -> None:
-        download_folder = os.path.join(os.path.expanduser("~"), "Downloads/")
+    def convert(self, output_name, foldername, folder_destino) -> None:
 
-        self.new_path = download_folder + f"{foldername}"
+        self.new_path = folder_destino + "/" + f"{foldername}"
         if not os.path.exists(self.new_path):
             os.makedirs(self.new_path)
 

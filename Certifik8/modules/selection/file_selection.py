@@ -2,7 +2,6 @@ import subprocess
 
 
 class FileSelection:
-
     def __init__(self):
         self.command = ["zenity", "--file-selection", "--multiple"]
 
