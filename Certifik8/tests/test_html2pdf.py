@@ -10,5 +10,5 @@ def test_converter_erro():
         output_name="Melissa Ribeiro Araujo.html",
         foldername="exemplo_Melissa",
         folder_destino=download_folder,
-        output_funcao="MONITOR"
+        output_funcao="MONITOR",
     )

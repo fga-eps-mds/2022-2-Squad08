@@ -3,8 +3,8 @@ from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
 from .path import path_inicial
 from .modules.utils import verificar_xlsx
-from .modules.selection.file_selection import FileSelection
-from .modules.selection.folder_selection import FolderSelection
+from .modules.selector.file_selection import FileSelection
+from .modules.selector.folder_selection import FolderSelection
 
 
 def run():

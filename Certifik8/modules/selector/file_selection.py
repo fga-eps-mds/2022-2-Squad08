@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 
 class FileSelection:
@@ -9,12 +10,10 @@ class FileSelection:
         try:
             zenity = subprocess.run(self.command, capture_output=True, check=False)
 
-            if zenity.returncode not in (0, 1):
-                return False
-
             filenames = str(zenity.stdout.decode("utf-8"))
             filenames = filenames.split("|")
             filenames[-1] = filenames[-1].replace("\n", "")
             return filenames
         except Exception:
-            return False
+            print("Ocorreu um erro inesperado!!!")
+            sys.exit()
