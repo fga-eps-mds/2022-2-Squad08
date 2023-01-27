@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 
 class FolderSelection:
@@ -9,11 +10,9 @@ class FolderSelection:
         try:
             zenity = subprocess.run(self.command, capture_output=True, check=False)
 
-            if zenity.returncode not in (0, 1):
-                return False
-
             foldername = str(zenity.stdout.decode("utf-8"))
             foldername = foldername.replace("\n", "")
             return foldername
         except Exception:
-            return False
+            print("Ocorreu um erro inesperado!!!")
+            sys.exit()
