@@ -39,7 +39,7 @@ def run():
     for path in paths:
         if verificar_xlsx(path):
             if tabela.set_data_frames(path):
-                if tabela.verificar_tab_padrao():
+                if tabela.verificar_tab_padrao(path_destino):
                     certificados.gerar_certificados(
                         path,
                         tabela.get_data_frame(),

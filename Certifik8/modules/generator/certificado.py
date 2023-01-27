@@ -64,7 +64,10 @@ class Certificados:
                     html=dados_certificado["nome_participante"] + ".html"
                 )
                 html2pdf.convert(
-                    dados_certificado["nome_participante"], foldername, path_destino
+                    dados_certificado["nome_participante"],
+                    foldername,
+                    path_destino,
+                    dados_certificado["cargo_participante"],
                 )
             except KeyboardInterrupt:
                 return False
