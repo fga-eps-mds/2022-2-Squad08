@@ -48,5 +48,5 @@ def run():
                     )
         else:
             print(f"{path} - não é .xlsx, certificados não gerados!!!")
-
+        time.sleep(1)
     return True

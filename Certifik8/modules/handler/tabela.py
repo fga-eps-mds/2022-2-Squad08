@@ -13,23 +13,27 @@ class Tabela:
         self.foldername = None
 
     def gerar_pasta_subpastas_cert(self):
-        if not os.path.exists(self.path_destino + "/" + self.foldername):
-            os.makedirs(self.path_destino + "/" + self.foldername)
-        for i in self.data_frame_funcao.index.tolist():
-            if not os.path.exists(
-                self.path_destino
-                + "/"
-                + self.foldername
-                + "/"
-                + self.data_frame_funcao["Função"][i]
-            ):
-                os.makedirs(
+        try:
+            if not os.path.exists(self.path_destino + "/" + self.foldername):
+                os.makedirs(self.path_destino + "/" + self.foldername)
+            for i in self.data_frame_funcao.index.tolist():
+                if not os.path.exists(
                     self.path_destino
                     + "/"
                     + self.foldername
                     + "/"
                     + self.data_frame_funcao["Função"][i]
+                ):
+                    os.makedirs(
+                        self.path_destino
+                        + "/"
+                        + self.foldername
+                        + "/"
+                        + self.data_frame_funcao["Função"][i]
                 )
+        except PermissionError:
+            print("Pasta para receber os certificados não escolhida, certificados não gerados!!!")
+            exit()
 
     def set_data_frames(self, filepath):
         self.path = filepath
