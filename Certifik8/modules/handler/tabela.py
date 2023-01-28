@@ -1,4 +1,5 @@
 import os
+import sys
 import pandas as pd
 from ..utils import get_foldername
 
@@ -30,10 +31,12 @@ class Tabela:
                         + self.foldername
                         + "/"
                         + self.data_frame_funcao["Função"][i]
-                )
+                    )
         except PermissionError:
-            print("Pasta para receber os certificados não escolhida, certificados não gerados!!!")
-            exit()
+            print(
+                "Pasta para receber os certificados não escolhida, certificados não gerados!!!"
+            )
+            sys.exit()
 
     def set_data_frames(self, filepath):
         self.path = filepath
