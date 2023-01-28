@@ -1,3 +1,4 @@
+import argparse
 import time
 from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
@@ -8,8 +9,13 @@ from .modules.selection.folder_selection import FolderSelection
 
 
 def run():
+    msg_help = 'Socorro!'
+    parser =argparse.ArgumentParser(description=msg_help)
+    if parser.parse_args() == parser.format_help():
+        parser.print_help()
+        exit()
     with open(
-        file=path_inicial + "/constants/menu.txt",
+       file=path_inicial + "/constants/menu.txt",
         encoding="utf-8",
     ) as text:
         menu = text.read()
