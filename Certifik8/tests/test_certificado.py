@@ -1,7 +1,9 @@
+import os
 from bs4 import BeautifulSoup
 from ..modules.generator.certificado import Certificados
 from ..modules.handler.tabela import Tabela
 from ..path import path_inicial
+
 
 certificado = Certificados()
 
@@ -28,9 +30,11 @@ def test_substituir_span_erro():
 
 def test_gerar_certificados():
     tabela = Tabela()
+    download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
     tabela.set_data_frames(path_inicial + "/examples/tabela_1_reg.xlsx")
     assert certificado.gerar_certificados(
         path_inicial + "/examples/tabela_1_reg.xlsx",
         tabela.get_data_frame(),
         tabela.get_data_frame_informacoes(),
+        download_folder,
     )

@@ -1,3 +1,4 @@
+import os
 from Certifik8.path import path_inicial
 from ..modules.handler.tabela import Tabela
 
@@ -21,7 +22,8 @@ def test_set_data_frame_sem_coluna_informacoes():
 
 def test_verificar_tabela_padrao():
     tabela.set_data_frames(path_inicial + "/examples/completa.xlsx")
-    assert tabela.verificar_tab_padrao()
+    download_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+    assert tabela.verificar_tab_padrao(download_folder)
 
 
 def test_verificar_set_data_frame_sem_col_info():

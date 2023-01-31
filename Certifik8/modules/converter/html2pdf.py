@@ -1,4 +1,3 @@
-import os
 import pdfkit
 
 
@@ -12,13 +11,9 @@ class Html2Pdf:
         }
         self.new_path = ""
 
-    def convert(self, output_name, foldername) -> None:
-        download_folder = os.path.join(os.path.expanduser("~"), "Downloads/")
+    def convert(self, output_name, foldername, folder_destino, output_funcao) -> None:
 
-        self.new_path = download_folder + f"{foldername}"
-        if not os.path.exists(self.new_path):
-            os.makedirs(self.new_path)
-
+        self.new_path = folder_destino + "/" + f"{foldername}" + "/" + output_funcao
         try:
             pdfkit.from_file(
                 self.html2pdf,
@@ -26,6 +21,7 @@ class Html2Pdf:
                 options=self.options,
             )
         except Exception:
+
             return False
 
         return True

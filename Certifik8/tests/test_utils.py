@@ -5,8 +5,8 @@ from Certifik8.path import path_inicial
 
 def test_data_emissao():
     regex = (
-        r"^(0[1-9]|[12]\d|3[01])\sde\s(Janeiro|Fevereiro|Março|Abril|Maio|Junho|" +
-        r"Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)\sde\s(20)\d{2}$"
+        r"^(0[1-9]|[12]\d|3[01])\sde\s(Janeiro|Fevereiro|Março|Abril|Maio|Junho|"
+        + r"Julho|Agosto|Setembro|Outubro|Novembro|Dezembro)\sde\s(20)\d{2}$"
     )
     assert re.match(regex, get_data())
 
