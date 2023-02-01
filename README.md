@@ -76,6 +76,7 @@ O Certifik8 precisa apenas que o usuário escolha uma tabela excel .xlsx em algu
 
 **Exemplo**:
 
+
 <div align="center">
   <a href="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/Certifik8/examples/Melissa%20Ribeiro%20Araujo.png">
     <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/Certifik8/examples/Melissa%20Ribeiro%20Araujo.png" width="413" height="291">
@@ -115,7 +116,6 @@ Testado no:
 pip install certifik8
 ```
 
-
 2. **Selecione as tabelas que possuem as informações do certificado:**
 <div align="center">
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_tabela.png" width="800">
@@ -127,10 +127,11 @@ pip install certifik8
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_pastas.png" width="800">
 </div>
 
-
 4. **Executando a aplicação:**
 <div id="gerando_certificados"><div>
 Faça os passos:
+
+>>>>>>> 44d9fb2 ((#73) Atualizações na documentação da aplicação no README)
 1. Digite o comando "certifik8" para inicializar a aplicação;
 2. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
 3. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
@@ -138,6 +139,7 @@ Faça os passos:
 5. Depois da aplicação ter finalizado sua execução, os certificados estarão alocados na pasta previamente escolhida pelo usuário, com cada tabela escolhida possuindo uma pasta e cada pasta estará dividida em subpastas de acordo com a função do indivíduo.
 * Estrutura da tabela Excel ([Exemplo](Certifik8/examples/completa.xlsx)): 
   - Obs: a tabela deve possuir obrigatoriamente essas 5 colunas em qualquer ordem, além disso a coluna informações deve possuir obrigatoriamente sete linhas e suas informações devem respeitar a ordem abaixo
+
 
 | 1 |           Nome             |       CPF      |    Função    | Frequência |     Informações    |
 |---|----------------------------|----------------|--------------|------------|--------------------|
@@ -149,6 +151,14 @@ Faça os passos:
 | 7 |           ...              |      ...       |     ...      |    ...     |Data Final          |
 | 8 |           ...              |      ...       |     ...      |    ...     |Nome Decano(a)      |
 |...|           ...              |      ...       |     ...      |    ...     |                    |
+
+<div align="center">
+
+*Demonstração de funcionalidade.*
+
+<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/demonstracao.png" width="500" height="300">
+
+</div>
 
 	
 ### **- 🧙🏼‍♀️ Desenvolvimento local**
@@ -169,6 +179,7 @@ poetry install
 ```
 poetry run certifik8
 ```
+
 2.2.1 **Caso deseje gerar certificados**
 
 <div>Siga para o <a src="gerando_certificados">tutorial do usuário</a> caso deseje aprender a gerar certificados pela aplicação</div>
