@@ -58,7 +58,10 @@
 </details>
 
 ## 📝 Sobre o projeto
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7ddab90 (Atualizações README)
 Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento ou curso na Semana Universitária da UnB. 
 
 ## 💻 Tecnologias
@@ -73,6 +76,7 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 
 ## 🤖 Funcionalidade
 O Certifik8 precisa apenas que o usuário escolha uma tabela excel .xlsx em algum de seus arquivos para em seguida escolher o local na qual a pasta com os certificados, de modelo já definido, ficarão salvos. Após essa escolha, a geração dos certificados em formato PDF acontece de forma que cada tabela escolhida possua uma pasta homônima no destino escolhido e cada pasta apresente subpastas que vão filtrar os participantes do evento de acordo com suas funções. 
+
 
 **Exemplo**:
 
@@ -116,6 +120,7 @@ Testado no:
 pip install certifik8
 ```
 
+
 2. **Selecione as tabelas que possuem as informações do certificado:**
 <div align="center">
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_tabela.png" width="800">
@@ -127,11 +132,15 @@ pip install certifik8
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_pastas.png" width="800">
 </div>
 
+
 4. **Executando a aplicação:**
 <div id="gerando_certificados"><div>
 Faça os passos:
+<<<<<<< HEAD
 
 >>>>>>> 44d9fb2 ((#73) Atualizações na documentação da aplicação no README)
+=======
+>>>>>>> 7ddab90 (Atualizações README)
 1. Digite o comando "certifik8" para inicializar a aplicação;
 2. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
 3. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
@@ -159,7 +168,6 @@ Faça os passos:
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/demonstracao.png" width="500" height="300">
 
 </div>
-
 	
 ### **- 🧙🏼‍♀️ Desenvolvimento local**
 
