@@ -68,11 +68,13 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 </p>
 
 ## 🤖 Funcionalidade
-O Certifik8 necessita de duas entradas de dados, uma tabela (Excel) no formato XLSX, e dados gerais sobre o evento. Para cada conjunto de informações passadas, um documento com um modelo já preestabelecido é gerado. Os certificados em formato PDF são salvos diretamente na pasta Downloads do computador do usuário.
+O Certifik8 precisa apenas que o usuário escolha uma tabela excel .xlsx em algum de seus arquivos para em seguida escolher o local na qual a pasta com os certificados, de modelo já definido, ficarão salvos. Após essa escolha, a geração dos certificados em formato PDF acontece de forma que a pasta apresente subpastas com certificados de acordo com cada funcionalidade dos participantes. 
+
+**Exemplo**:
 
 <div align="center">
-  <a href="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/exemplo/Melissa%20Ribeiro%20Araujo.png">
-    <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/exemplo/Melissa%20Ribeiro%20Araujo.png" width="413" height="291">
+  <a href="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/Certifik8/examples/Melissa%20Ribeiro%20Araujo.png">
+    <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/Certifik8/examples/Melissa%20Ribeiro%20Araujo.png" width="413" height="291">
   </a>
 </div>
 
@@ -98,51 +100,49 @@ Testado no:
     sudo apt install python3 && sudo apt install python3-pip
     ```
 
-  - **Instalar a ferramenta wkhtmltopdf**
-    ```
-    sudo apt install wkhtmltopdf
-    ```
-
 ## 🛞 Como executar/rodar
 ### **- 👩‍🦰 Usuário**
 1. **Instalando o Certifik8:**
 ```
-pip install -i https://test.pypi.org/simple/ Certifik8==0.0.2
+pip install certifik8
 ```
 
-2. **Digite o comando para obter o endereço da biblioteca:**
- ```
- pip show Certifik8 
- ```
+2. **Selecione as tabelas que possuem as informações do certificado:**
+ 
 <div align="center">
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/pip-show.png" width="500" height="300">
-
-Copie o endereço após a "Location", marcado de vermelho na imagem.
+<img src="./docs/images/escolhe_tabela.png" width="500" height="300">
 </div>
 
-3. **Executando a aplicação:**
- ```
- python3 {endereço_biblioteca}/Certifik8/main.py
- ```
+3. **Selecione a pasta onde deseja guardar os certificados:**
+ 
 <div align="center">
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/path-image.png" width="762" height="95">
-
-Substitua a chave {endereço_biblioteca} pelo endereço copiado no passo 2.
+<img src="./docs/images/escolhe_pastas.png" width="500" height="300">
 </div>
 
-4. **Insira os dados conforme pedido:**
+4. **Executando a aplicação:**
+<div id="gerando_certificados"><div>
+Faça os passos:
 
-* O endereço da tabela deve ser absoluto.
+1. Digite o comando "certifik8" para inicializar a aplicação;
+2. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
+3. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
+4. Clique em OK para realizar a geração e assim os certificados serão gerados para a pasta escolhida;
+5. Depois da aplicação ter finalizado sua execução, os certificados estarão alocados na pasta previamente escolhida pelo usuário, com cada tabela escolhida possuindo uma pasta e cada pasta estará dividida em subpastas de acordo com a função do indivíduo.
 
-* Estrutura da tabela Excel ([Exemplo](docs/exemplo/exemplo.xlsx)): 
-  - Obs: a tabela deve seguir essa estrutura obrigatoriamente.
-    | 1  | Nome | cpf | Função | Frequência |
-    |---|------|-----|--------|------------|
-    | 2 | Samuel Barbosa Alves | 729.334.326-41 | PARTICIPANTE | 100 |
-    | 3 | Melissa Ribeiro Araujo | 201.544.482-30 | MONITOR | 97 |
-    | 4 | Gabrielly Rodrigues Castro | 451.016.912-40 | PARTICIPANTE | 80 |
-    | ... | ... | ... | ... | ... |
-  
+
+* Estrutura da tabela Excel ([Exemplo](Certifik8/examples/completa.xlsx)): 
+  - Obs: a tabela deve possuir obrigatoriamente essas 5 colunas em qualquer ordem, além disso a coluna informações deve possuir obrigatoriamente sete linhas e suas informações devem respeitar a ordem abaixo
+
+| 1 |           Nome             |       CPF      |    Função    | Frequência |     Informações    |
+|---|----------------------------|----------------|--------------|------------|--------------------|
+| 2 |Samuel Barbosa Alves        |729.334.326-41  |PARTICIPANTE  |100         |Nome do Curso       |
+| 3 |Melissa Ribeiro Araujo      |201.544.482-30  |MONITOR       |97          |Carga Horaria       |
+| 4 |Gabrielly Rodrigues Castro  |451.016.912-40  |PARTICIPANTE  |80          |Nome do Professor   |
+| 5 |           ...              |      ...       |     ...      |    ...     |Nome do Departamento|
+| 6 |           ...              |      ...       |     ...      |    ...     |Data Inicial        |
+| 7 |           ...              |      ...       |     ...      |    ...     |Data Final          |
+| 8 |           ...              |      ...       |     ...      |    ...     |Nome Decano(a)      |
+|...|           ...              |      ...       |     ...      |    ...     |                    |
 
 <div align="center">
 
@@ -161,11 +161,21 @@ git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 2. **Rode os comandos:**
 
 ```
-sudo docker build -t squad08
+poetry install
 ```
 
+2.2 **Comando que roda a aplicação** 
 ```
-docker run --name cont_squad08 -it squad08
+poetry run certifik8
+```
+
+2.2.1 **Caso deseje gerar certificados**
+
+<div>Siga para o <a src="gerando_certificados">tutorial do usuário</a> caso deseje aprender a gerar certificados pela aplicação</div>
+
+2.3 **Comando para acessar tutorial da aplicação**
+```
+poetry run certifik8 --h
 ```
 
 
