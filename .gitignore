@@ -6,7 +6,7 @@ Certifik8/modules/__pycache__/
 Certifik8/modules/generator/__pycache__/
 Certifik8/modules/converter/__pycache__/
 Certifik8/modules/handler/__pycache__/
-Certifik8/modules/selection/__pycache__/
+Certifik8/modules/selector/__pycache__/
 Certifik8/tests/__pycache__/
 poetry.lock
 .pytest_cache

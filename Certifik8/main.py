@@ -4,18 +4,25 @@ from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
 from .path import path_inicial
 from .modules.utils import verificar_xlsx
-from .modules.selection.file_selection import FileSelection
-from .modules.selection.folder_selection import FolderSelection
+from .modules.selector.file_selection import FileSelection
+from .modules.selector.folder_selection import FolderSelection
 
 
 def run():
-    msg_help = 'Socorro!'
-    parser =argparse.ArgumentParser(description=msg_help)
-    if parser.parse_args() == parser.format_help():
-        parser.print_help()
+    with open(
+        file=path_inicial + "/constants/help.txt",
+        encoding="utf-8",
+    ) as text_help:
+        msg_help = text_help.read()
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("-h", "--help", help="Como usar", action="store_true")
+    args = parser.parse_args()
+
+    if args.help:
+        print(msg_help)
         exit()
     with open(
-       file=path_inicial + "/constants/menu.txt",
+        file=path_inicial + "/constants/menu.txt",
         encoding="utf-8",
     ) as text:
         menu = text.read()
