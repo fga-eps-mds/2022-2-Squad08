@@ -7,6 +7,24 @@ from ...path import path_inicial
 
 
 class Certificados:
+    """
+    Classe responsável por gerar certificados a partir de um template HTML e dados contidos em um data frame.
+
+    Atributos:
+        template (str): HTML que será utilizado como template para geração dos certificados.
+        soup (bs4.BeautifulSoup): Objeto que representa o HTML com os dados de um participante.
+
+    Métodos:
+        substituir_span (str, str):
+            Recebe o nome da classe e o conteúdo a ser inserido no HTML,
+            substitui o primeiro span encontrado com classe igual a
+            `class_name` pelo `content`.
+        gerar_certificados (str, pandas.DataFrame, pandas.DataFrame, str):
+            Recebe o caminho do arquivo CSV, data frames com dados dos participantes
+            e informações do evento, além do caminho de destino dos arquivos PDF gerados,
+            gerando os certificados e salvando-os no caminho especificado.
+    """
+
     def __init__(self):
         with open(
             file=path_inicial + "/constants/template.html",
@@ -16,6 +34,17 @@ class Certificados:
         self.soup = None
 
     def substituir_span(self, class_name, content):
+        """
+        Substitui o primeiro span encontrado com classe igual a `class_name` pelo `content`.
+
+        Args:
+            class_name (str): Nome da classe do span a ser substituído.
+            content (str): Conteúdo a ser inserido no lugar do span.
+
+        Returns:
+            bool: True caso a substituição tenha sido bem sucedida, False caso contrário.
+        """
+
         try:
             self.soup.find("span", class_=class_name).replace_with(content)
             return True
@@ -25,6 +54,19 @@ class Certificados:
     def gerar_certificados(
         self, filepath, data_frame, data_frame_informacoes, path_destino
     ):
+        """
+        Gera os certificados a partir do template HTML e dados contidos em um data frame.
+
+        Args:
+            filepath (str): Caminho do arquivo CSV com os dados dos participantes.
+            data_frame (pandas.DataFrame): Data frame com os dados dos participantes.
+            data_frame_informacoes (pandas.DataFrame): Data frame com as informações do evento.
+            path_destino (str): Caminho de destino dos arquivos PDF gerados.
+
+        Returns:
+            bool: True caso a geração dos certificados tenha sido bem sucedida, False caso contrário
+        """
+
         for i in tqdm(
             data_frame.index,
             ncols=100,

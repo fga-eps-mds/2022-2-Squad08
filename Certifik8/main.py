@@ -8,6 +8,15 @@ from .modules.selector.folder_selection import FolderSelection
 
 
 def run():
+    """
+    Objetivo da classe: controlar o fluxo do programa.
+
+        1. Exibição de menu inicial
+        2. Seleção de tabelas .xlsx para gerar certificados
+        3. Seleção da pasta destino para salvar os certificados
+        4. Chama as funções de geração de certificados
+    """
+
     with open(
         file=path_inicial + "/constants/menu.txt",
         encoding="utf-8",
