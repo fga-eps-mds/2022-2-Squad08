@@ -12,14 +12,16 @@ class FileSelection:
 
     def __init__(self):
         """
-        Inicializa a classe com o comando para executar o diálogo de seleção de arquivos.
+        Inicializa a classe com o comando para executar o diálogo de seleção
+        de arquivos.
         """
 
         self.command = ["zenity", "--file-selection", "--multiple"]
 
     def run(self):
         """
-        Método responsável por rodar o comando do zenity e retornar a lista de nomes de arquivos selecionados.
+        Método responsável por rodar o comando do zenity e retornar a lista
+        de nomes de arquivos selecionados.
 
         Retorna:
             list: Lista de nomes de arquivos selecionados.
@@ -29,7 +31,9 @@ class FileSelection:
         """
 
         try:
-            zenity = subprocess.run(self.command, capture_output=True, check=False)
+            zenity = subprocess.run(self.command,
+                                    capture_output=True,
+                                    check=False)
 
             filenames = str(zenity.stdout.decode("utf-8"))
             filenames = filenames.split("|")

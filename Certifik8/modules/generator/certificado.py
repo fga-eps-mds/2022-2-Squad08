@@ -8,11 +8,14 @@ from ...path import path_inicial
 
 class Certificados:
     """
-    Classe responsável por gerar certificados a partir de um template HTML e dados contidos em um data frame.
+    Classe responsável por gerar certificados a partir de um template HTML
+    e dados contidos em um data frame.
 
     Atributos:
-        template (str): HTML que será utilizado como template para geração dos certificados.
-        soup (bs4.BeautifulSoup): Objeto que representa o HTML com os dados de um participante.
+        template (str): HTML que será utilizado como template para
+        geração dos certificados.
+        soup (bs4.BeautifulSoup): Objeto que representa o HTML com os
+        dados de um participante.
 
     Métodos:
         substituir_span (str, str):
@@ -20,9 +23,10 @@ class Certificados:
             substitui o primeiro span encontrado com classe igual a
             `class_name` pelo `content`.
         gerar_certificados (str, pandas.DataFrame, pandas.DataFrame, str):
-            Recebe o caminho do arquivo CSV, data frames com dados dos participantes
-            e informações do evento, além do caminho de destino dos arquivos PDF gerados,
-            gerando os certificados e salvando-os no caminho especificado.
+            Recebe o caminho do arquivo CSV, data frames com dados
+            dos participantes e informações do evento, além do
+            caminho de destino dos arquivos PDF gerados, gerando os
+            certificados e salvando-os no caminho especificado.
     """
 
     def __init__(self):
@@ -35,14 +39,16 @@ class Certificados:
 
     def substituir_span(self, class_name, content):
         """
-        Substitui o primeiro span encontrado com classe igual a `class_name` pelo `content`.
+        Substitui o primeiro span encontrado com classe igual
+        a `class_name` pelo `content`.
 
         Args:
             class_name (str): Nome da classe do span a ser substituído.
             content (str): Conteúdo a ser inserido no lugar do span.
 
         Returns:
-            bool: True caso a substituição tenha sido bem sucedida, False caso contrário.
+            bool: True caso a substituição tenha sido bem sucedida,
+            False caso contrário.
         """
 
         try:
@@ -55,16 +61,21 @@ class Certificados:
         self, filepath, data_frame, data_frame_informacoes, path_destino
     ):
         """
-        Gera os certificados a partir do template HTML e dados contidos em um data frame.
+        Gera os certificados a partir do template HTML e dados
+        contidos em um data frame.
 
         Args:
-            filepath (str): Caminho do arquivo CSV com os dados dos participantes.
-            data_frame (pandas.DataFrame): Data frame com os dados dos participantes.
-            data_frame_informacoes (pandas.DataFrame): Data frame com as informações do evento.
+            filepath (str): Caminho do arquivo CSV com os dados
+            dos participantes.
+            data_frame (pandas.DataFrame): Data frame com os dados
+            dos participantes.
+            data_frame_informacoes (pandas.DataFrame): Data frame com
+            as informações do evento.
             path_destino (str): Caminho de destino dos arquivos PDF gerados.
 
         Returns:
-            bool: True caso a geração dos certificados tenha sido bem sucedida, False caso contrário
+            bool: True caso a geração dos certificados tenha sido bem sucedida,
+             False caso contrário
         """
 
         for i in tqdm(
@@ -80,7 +91,8 @@ class Certificados:
                     "nome_participante": data_frame["Nome"][i],
                     "cpf_participante": data_frame["CPF"][i],
                     "cargo_participante": data_frame["Função"][i],
-                    "frequencia_participante": str(data_frame["Frequência"][i]),
+                    "frequencia_participante":
+                        str(data_frame["Frequência"][i]),
                     "nome_evento": data_frame_informacoes.iloc[0, 0],
                     "carga_hor": data_frame_informacoes.iloc[1, 0],
                     "nome_prof": data_frame_informacoes.iloc[2, 0],
@@ -114,5 +126,6 @@ class Certificados:
             except KeyboardInterrupt:
                 return False
             finally:
-                os.remove(str(dados_certificado["nome_participante"]) + ".html")
+                os.remove(str(dados_certificado["nome_participante"])
+                          + ".html")
         return True

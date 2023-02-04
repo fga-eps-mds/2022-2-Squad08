@@ -30,7 +30,8 @@ def test_set_data_frame_vazia():
 
 def test_set_data_frame_sem_coluna_informacoes():
     """
-    Verifica se a exceção é lançada ao tentar ler uma tabela sem a coluna de informações.
+    Verifica se a exceção é lançada ao tentar ler uma tabela sem a coluna de
+    informações.
 
     Retorna:
         assert (bool): O método retorna o resultado da comparação.
@@ -56,7 +57,8 @@ def test_verificar_tabela_padrao():
 
 def test_verificar_set_data_frame_sem_col_info():
     """
-    Verifica se a exceção é lançada ao tentar ler uma tabela sem a coluna de informações.
+    Verifica se a exceção é lançada ao tentar ler uma tabela sem a coluna de
+    informações.
 
     Retorna:
         assert (bool): O método retorna o resultado da comparação.

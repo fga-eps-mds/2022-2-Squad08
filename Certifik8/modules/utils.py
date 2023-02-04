@@ -53,7 +53,8 @@ def verificar_xlsx(path: str) -> bool:
         path (str): Caminho do arquivo.
 
     Returns:
-        bool: Verdadeiro se o caminho corresponde a um arquivo xlsx, falso caso contrário.
+        bool: Verdadeiro se o caminho corresponde a um arquivo xlsx,
+        falso caso contrário.
     """
 
     return os.path.exists(path) and os.path.splitext(path)[1] == ".xlsx"

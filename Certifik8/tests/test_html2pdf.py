@@ -7,7 +7,8 @@ def test_converter_erro():
     """
     Testa a conversão do arquivo HTML para PDF quando há erro na entrada.
 
-    Verifica se a função `convert` retorna False quando ocorre um erro na entrada.
+    Verifica se a função `convert` retorna False quando ocorre um erro na
+    entrada.
 
     Returns:
         bool: False, se ocorreu um erro na conversão.
