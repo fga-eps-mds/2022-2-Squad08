@@ -9,6 +9,7 @@
 [![MIT License](https://img.shields.io/github/license/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/LICENSE)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e00e7a4c51d3c657319d/maintainability)](https://codeclimate.com/github/fga-eps-mds/2022-2-Certifik8/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e00e7a4c51d3c657319d/test_coverage)](https://codeclimate.com/github/fga-eps-mds/2022-2-Certifik8/test_coverage)
 
 </div>
 
