@@ -9,18 +9,19 @@ from .modules.selector.folder_selection import FolderSelection
 
 
 def run():
-    with open(
-        file=path_inicial + "/constants/help.txt",
-        encoding="utf-8",
-    ) as text_help:
-        msg_help = text_help.read()
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument("-h", "--help", help="Como usar", action="store_true")
     args = parser.parse_args()
 
     if args.help:
+        with open(
+            file=path_inicial + "/constants/help.txt",
+            encoding="utf-8",
+        ) as text_help:
+            msg_help = text_help.read()
         print(msg_help)
         exit()
+        
     with open(
         file=path_inicial + "/constants/menu.txt",
         encoding="utf-8",
