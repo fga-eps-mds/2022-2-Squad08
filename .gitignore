@@ -11,3 +11,6 @@ Certifik8/tests/__pycache__/
 poetry.lock
 .pytest_cache
 .coverage
+Certifik8/modules/selector/__pycache__/__init__.cpython-310.pyc
+Certifik8/modules/selector/__pycache__/file_selection.cpython-310.pyc
+Certifik8/modules/selector/__pycache__/folder_selection.cpython-310.pyc
