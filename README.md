@@ -1,12 +1,14 @@
 # 2022-2-Certifik8
 
-<a name="readme-top"></a>
+`<a name="readme-top"></a>`
 
 <div align="center">
 
 [![Contributors](https://img.shields.io/github/contributors/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/issues)
 [![MIT License](https://img.shields.io/github/license/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/LICENSE)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/e00e7a4c51d3c657319d/maintainability)](https://codeclimate.com/github/fga-eps-mds/2022-2-Certifik8/maintainability)
 
 </div>
 
@@ -15,10 +17,10 @@
   <a href="https://github.com/fga-eps-mds/2022-2-Certifik8">
     <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/logo.png" width="300" height="300">
   </a>
-  
-  <h3 align="center">Certifik8</h3>
 
-  <p align="center">
+<h3 align="center">Certifik8</h3>
+
+<p align="center">
    Gerador Automatico de Certificados 
     <br />
     <a href="docs">Documentos</a>
@@ -30,6 +32,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Conteúdo</summary>
   <ol>
@@ -55,7 +58,7 @@
 
 ## 📝 Sobre o projeto
 
-Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento. 
+Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento.
 
 ## 💻 Tecnologias
 
@@ -68,6 +71,7 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 </p>
 
 ## 🤖 Funcionalidade
+
 O Certifik8 necessita de duas entradas de dados, uma tabela (Excel) no formato XLSX, e dados gerais sobre o evento. Para cada conjunto de informações passadas, um documento com um modelo já preestabelecido é gerado. Os certificados em formato PDF são salvos diretamente na pasta Downloads do computador do usuário.
 
 <div align="center">
@@ -77,9 +81,11 @@ O Certifik8 necessita de duas entradas de dados, uma tabela (Excel) no formato X
 </div>
 
 ## ❗ Requisitos
-O Certifik8 só funciona em sistemas operacionais Linux. 
+
+O Certifik8 só funciona em sistemas operacionais Linux.
 
 Testado no:
+
 - Linux Mint 21
 - Ubuntu 22.04.01
 
@@ -91,58 +97,66 @@ Testado no:
 
 </div>
 
-
 **Para conseguir executá-lo, o usuário precisa instalar:**
-  - **Python3 e Pip**
-    ```
-    sudo apt install python3 && sudo apt install python3-pip
-    ```
 
-  - **Instalar a ferramenta wkhtmltopdf**
-    ```
-    sudo apt install wkhtmltopdf
-    ```
+- **Python3 e Pip**
+
+  ```
+  sudo apt install python3 && sudo apt install python3-pip
+  ```
+- **Instalar a ferramenta wkhtmltopdf**
+
+  ```
+  sudo apt install wkhtmltopdf
+  ```
 
 ## 🛞 Como executar/rodar
+
 ### **- 👩‍🦰 Usuário**
+
 1. **Instalando o Certifik8:**
+
 ```
 pip install -i https://test.pypi.org/simple/ Certifik8==0.0.2
 ```
 
 2. **Digite o comando para obter o endereço da biblioteca:**
- ```
+
+```
  pip show Certifik8 
- ```
+```
+
 <div align="center">
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/pip-show.png" width="500" height="300">
 
 Copie o endereço após a "Location", marcado de vermelho na imagem.
+
 </div>
 
 3. **Executando a aplicação:**
- ```
+
+```
  python3 {endereço_biblioteca}/Certifik8/main.py
- ```
+```
+
 <div align="center">
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/path-image.png" width="762" height="95">
 
 Substitua a chave {endereço_biblioteca} pelo endereço copiado no passo 2.
+
 </div>
 
 4. **Insira os dados conforme pedido:**
 
 * O endereço da tabela deve ser absoluto.
+* Estrutura da tabela Excel ([Exemplo](docs/exemplo/exemplo.xlsx)):
 
-* Estrutura da tabela Excel ([Exemplo](docs/exemplo/exemplo.xlsx)): 
-  - Obs: a tabela deve seguir essa estrutura obrigatoriamente.
-    | 1  | Nome | cpf | Função | Frequência |
-    |---|------|-----|--------|------------|
-    | 2 | Samuel Barbosa Alves | 729.334.326-41 | PARTICIPANTE | 100 |
-    | 3 | Melissa Ribeiro Araujo | 201.544.482-30 | MONITOR | 97 |
-    | 4 | Gabrielly Rodrigues Castro | 451.016.912-40 | PARTICIPANTE | 80 |
-    | ... | ... | ... | ... | ... |
-  
+  - Obs: a tabela deve seguir essa estrutura obrigatoriamente.| 1   | Nome                       | cpf            | Função     | Frequência |
+    | --- | -------------------------- | -------------- | ------------ | ----------- |
+    | 2   | Samuel Barbosa Alves       | 729.334.326-41 | PARTICIPANTE | 100         |
+    | 3   | Melissa Ribeiro Araujo     | 201.544.482-30 | MONITOR      | 97          |
+    | 4   | Gabrielly Rodrigues Castro | 451.016.912-40 | PARTICIPANTE | 80          |
+    | ... | ...                        | ...            | ...          | ...         |
 
 <div align="center">
 
@@ -153,7 +167,9 @@ Substitua a chave {endereço_biblioteca} pelo endereço copiado no passo 2.
 </div>
 
 ### **- 🧙🏼‍♀️ Desenvolvimento local**
+
 1. **Clone o repositório**
+
 ```
 git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 ```
@@ -167,7 +183,6 @@ sudo docker build -t squad08
 ```
 docker run --name cont_squad08 -it squad08
 ```
-
 
 ## 👨‍💻 Desenvolvedores
 
