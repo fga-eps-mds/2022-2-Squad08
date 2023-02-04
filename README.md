@@ -1,12 +1,14 @@
 # 2022-2-Certifik8
 
-<a name="readme-top"></a>
+`<a name="readme-top"></a>`
 
 <div align="center">
 
 [![Contributors](https://img.shields.io/github/contributors/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/issues)
 [![MIT License](https://img.shields.io/github/license/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/LICENSE)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/e00e7a4c51d3c657319d/maintainability)](https://codeclimate.com/github/fga-eps-mds/2022-2-Certifik8/maintainability)
 
 </div>
 
@@ -15,10 +17,10 @@
   <a href="https://github.com/fga-eps-mds/2022-2-Certifik8">
     <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/logo.png" width="300" height="300">
   </a>
-  
-  <h3 align="center">Certifik8</h3>
 
-  <p align="center">
+<h3 align="center">Certifik8</h3>
+
+<p align="center">
    Gerador Automatico de Certificados 
     <br />
     <a href="docs">Documentos</a>
@@ -30,6 +32,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 <details>
   <summary>Conteúdo</summary>
   <ol>
@@ -79,9 +82,11 @@ O Certifik8 precisa apenas que o usuário escolha uma tabela excel .xlsx em algu
 </div>
 
 ## ❗ Requisitos
-O Certifik8 só funciona em sistemas operacionais Linux. 
+
+O Certifik8 só funciona em sistemas operacionais Linux.
 
 Testado no:
+
 - Linux Mint 21
 - Ubuntu 22.04.01
 
@@ -93,7 +98,6 @@ Testado no:
 
 </div>
 
-
 **Para conseguir executá-lo, o usuário precisa instalar:**
   - **Python3 e Pip**
     ```
@@ -101,8 +105,11 @@ Testado no:
     ```
 
 ## 🛞 Como executar/rodar
+
 ### **- 👩‍🦰 Usuário**
+
 1. **Instalando o Certifik8:**
+
 ```
 pip install certifik8
 ```
@@ -144,7 +151,9 @@ Faça os passos:
 
 	
 ### **- 🧙🏼‍♀️ Desenvolvimento local**
+
 1. **Clone o repositório**
+
 ```
 git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 ```
@@ -155,11 +164,10 @@ git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 poetry install
 ```
 
-2.2 **Comando que roda a aplicação** 
+2.2 **Comando que roda a aplicação**
 ```
 poetry run certifik8
 ```
-
 2.2.1 **Caso deseje gerar certificados**
 
 <div>Siga para o <a src="gerando_certificados">tutorial do usuário</a> caso deseje aprender a gerar certificados pela aplicação</div>
@@ -168,7 +176,6 @@ poetry run certifik8
 ```
 poetry run certifik8 --h
 ```
-
 
 ## 👨‍💻 Desenvolvedores
 
