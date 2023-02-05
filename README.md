@@ -55,7 +55,7 @@
 
 ## 📝 Sobre o projeto
 
-Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento. 
+Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento ou curso na Semana Universitária da UnB. 
 
 ## 💻 Tecnologias
 
@@ -68,7 +68,7 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 </p>
 
 ## 🤖 Funcionalidade
-O Certifik8 precisa apenas que o usuário escolha uma tabela excel .xlsx em algum de seus arquivos para em seguida escolher o local na qual a pasta com os certificados, de modelo já definido, ficarão salvos. Após essa escolha, a geração dos certificados em formato PDF acontece de forma que a pasta apresente subpastas com certificados de acordo com cada funcionalidade dos participantes. 
+O Certifik8 precisa apenas que o usuário escolha uma tabela excel .xlsx em algum de seus arquivos para em seguida escolher o local na qual a pasta com os certificados, de modelo já definido, ficarão salvos. Após essa escolha, a geração dos certificados em formato PDF acontece de forma que cada tabela escolhida possua uma pasta homônima no destino escolhido e cada pasta apresente subpastas que vão filtrar os participantes do evento de acordo com suas funções. 
 
 **Exemplo**:
 
@@ -107,29 +107,27 @@ Testado no:
 pip install certifik8
 ```
 
+
 2. **Selecione as tabelas que possuem as informações do certificado:**
- 
 <div align="center">
-<img src="./docs/images/escolhe_tabela.png" width="500" height="300">
+<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_tabela.png" width="800">
 </div>
 
+
 3. **Selecione a pasta onde deseja guardar os certificados:**
- 
 <div align="center">
-<img src="./docs/images/escolhe_pastas.png" width="500" height="300">
+<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_pastas.png" width="800">
 </div>
+
 
 4. **Executando a aplicação:**
 <div id="gerando_certificados"><div>
 Faça os passos:
-
 1. Digite o comando "certifik8" para inicializar a aplicação;
 2. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
 3. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
 4. Clique em OK para realizar a geração e assim os certificados serão gerados para a pasta escolhida;
 5. Depois da aplicação ter finalizado sua execução, os certificados estarão alocados na pasta previamente escolhida pelo usuário, com cada tabela escolhida possuindo uma pasta e cada pasta estará dividida em subpastas de acordo com a função do indivíduo.
-
-
 * Estrutura da tabela Excel ([Exemplo](Certifik8/examples/completa.xlsx)): 
   - Obs: a tabela deve possuir obrigatoriamente essas 5 colunas em qualquer ordem, além disso a coluna informações deve possuir obrigatoriamente sete linhas e suas informações devem respeitar a ordem abaixo
 
@@ -144,14 +142,7 @@ Faça os passos:
 | 8 |           ...              |      ...       |     ...      |    ...     |Nome Decano(a)      |
 |...|           ...              |      ...       |     ...      |    ...     |                    |
 
-<div align="center">
-
-*Demonstração de funcionalidade.*
-
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/demonstracao.png" width="500" height="300">
-
-</div>
-
+	
 ### **- 🧙🏼‍♀️ Desenvolvimento local**
 1. **Clone o repositório**
 ```
