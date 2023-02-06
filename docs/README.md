@@ -59,7 +59,7 @@
 
 <br>
 
-#### Biblioteca para Criação do Ambiente Virtual e Empacontamento:
+#### Biblioteca para Criação do Ambiente Virtual e Gestão de Pacotes:
 <ul>
     <li>Poetry: 1.3.2</li>
 </ul>
