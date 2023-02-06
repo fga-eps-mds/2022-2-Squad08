@@ -1,10 +1,3 @@
-from src.Certifik8.html2pdf import Html2Pdf
-import pandas as pd
-import os
-from src.Certifik8.data_emissao import DataEmissao
-from bs4 import BeautifulSoup
-
-html_doc = """
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,6 +8,7 @@ html_doc = """
     <style>
         @import url(
         'https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
         main{
             position: relative;
             width: 1096px;
@@ -80,66 +74,9 @@ html_doc = """
         </p>
         <p id="local_data">Brasília, <span class="data_emissao"></span></p>
         <div id="informacoes_adicionais">
-            <p class="texto_adicional">OLGAMIR AMANCIA FERREIRA</p>
-            <p class="texto_adicional nao_negrito">Decana de Extensão</p>
+            <p class="texto_adicional"><span class="nome_decano"></span></p>
+            <p class="texto_adicional nao_negrito">Decano(a) de Extensão</p>
         </div>
     </main>
 </body>
 </html>
-"""
-
-
-class Certificados:
-    DataEmissao = DataEmissao()
-
-    def xlsx_content(self, path):
-        data_frame = pd.read_excel(path)
-        return data_frame
-
-    def gerarCertificados(
-        self,
-        filepath,
-    ):
-        try:
-            df = self.xlsx_content(filepath)
-        except Exception as error:
-            print(f'An error occurred: {error}')
-            return
-
-        def separarTabela(self, df):
-            df_info = df[["Informações"]].copy()
-            df.drop(columns=["Informações"], inplace=True)
-            return df_info
-
-        df_info = separarTabela(self, df)
-
-        data_emissao = self.DataEmissao.getDataPorExtenso()
-        for i in df.index:
-            soup = BeautifulSoup(html_doc, "html.parser")
-            soup.find("span", class_="nome_participante").replace_with(df["Nome"][i])
-            soup.find("span", class_="cpf_participante").replace_with(df["CPF"][i])
-            soup.find("span", class_="nome_evento").replace_with(df_info.iloc[0, 0])
-            soup.find("span", class_="carga_hor").replace_with(df_info.iloc[1, 0])
-            soup.find("span", class_="nome_prof").replace_with(df_info.iloc[2, 0])
-            soup.find("span", class_="nome_dep").replace_with(df_info.iloc[3, 0])
-            soup.find("span", class_="cargo_participante").replace_with(df["Função"][i])
-            soup.find("span", class_="frequencia_participante").replace_with(
-                str(df["Frequência"][i])
-            )
-            soup.find("span", class_="data_inicial").replace_with(df_info.iloc[4, 0])
-            soup.find("span", class_="data_final").replace_with(df_info.iloc[5, 0])
-            soup.find("span", class_="data_emissao").replace_with(data_emissao)
-            with open(df["Nome"][i] + ".html", "w") as file:
-                file.writelines(soup.prettify())
-
-            foldername = filepath.split("/")
-            foldername = foldername[-1]
-            foldername = foldername.split(".")[0]
-
-            Html2Pdfs = Html2Pdf(html=df["Nome"][i] + ".html")
-            Html2Pdfs.convert(df["Nome"][i], foldername)
-            os.remove(df["Nome"][i] + ".html")
-
-
-if __name__ == "__main__":
-    pass

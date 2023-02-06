@@ -13,13 +13,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.10'
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install flake8
+          pip install pylint
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Lint flake8
         run: |
-          flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
-          flake8 src --count --max-complexity=10 --max-line-length=120 --statistics
+          flake8 Certifik8 --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 Certifik8 --count --max-complexity=10 --max-line-length=120 --statistics
+          find . -type f -name "*.py" -exec pylint --disable=C0114,C0115,C0116,E0402,W0703,R0903 -j 0 --exit-zero {} \;

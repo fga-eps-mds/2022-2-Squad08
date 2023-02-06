@@ -1,0 +1,26 @@
+name: teste-unitario-automatizado
+
+on: # Quando o usuário realizar um push, será feito os testes
+  push:
+  pull_request:
+  schedule: [{cron: "0 0 * * *"}] #toda meia noite sera realizado os testes
+
+jobs:
+  build:
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+    - name: Test with pytest
+      run: | # Vai realizar os testes
+        pip install pytest
+        pip install pytest-cov
+        pip install tqdm
+        pip install certifik8
+        pytest --cov-config=.coveragerc --cov=Certifik8

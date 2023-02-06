@@ -11,7 +11,7 @@ authors = [
     "Geovane <galefreitas@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "src/Certifik8"}]
+packages = [{include = "Certifik8"}]
 repository = "https://github.com/fga-eps-mds/Certifik8"
 
 [tool.poetry.dependencies]
@@ -21,9 +21,9 @@ setuptools = "65.6.3"
 Pillow = "9.3.0"
 PyPDF2 = "2.11.1"
 pdfkit = "1.0.0"
-pendulum = "^2.1.2"
 beautifulsoup4 = "^4.11.1"
 openpyxl = "^3.0.10"
+tqdm = "^4.64.1"
 
 
 [build-system]
@@ -31,4 +31,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-certifik8 = 'src.Certifik8.main:run'
+certifik8 = 'Certifik8.main:run'

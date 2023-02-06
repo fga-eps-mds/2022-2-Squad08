@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Template
+  </title>
+  <style>
+   @import url(
+        'https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        main{
+            position: relative;
+            width: 1096px;
+            height: 748px;
+            font-family: 'Roboto', sans-serif;
+            background-image: url(
+            https://cdn.discordapp.com/attachments/1034883038586351647/1049011662566465546/template.png);
+        }
+        #texto_principal{
+            position: absolute;
+            top: 250px;
+            left: 148px;
+            width: 800px;
+            text-align: justify;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .nome_participante,
+        .cpf_participante,
+        .nome_evento,
+        .nome_prof,
+        .nome_dep,
+        .cargo_participante,
+        .frequencia_participante{
+            text-transform: uppercase;
+        }
+        #local_data{
+            position: absolute;
+            top: 400px;
+            right: 148px;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        #informacoes_adicionais{
+            position: absolute;
+            top: 470px;
+            width: 1096px;
+        }
+        .texto_adicional{
+            margin: 0;
+            font-size: 22px;
+            text-align: center;
+            font-weight: 700;
+        }
+        p.nao_negrito{
+            font-size: 20px;
+            font-weight: 400;
+        }
+  </style>
+ </head>
+ <body>
+  <main>
+   <p id="texto_principal">
+    Certificamos que,
+    Melissa Ribeiro Araujo
+    , CPF
+    201.544.482-30
+    , participou do
+            evento de extensão
+    Nome do Curso
+    , com carga horária de
+    Carga Horaria
+    hora(s), coordenado pelo(a) Professor(a)
+    Nome do Professor
+    , promovido
+            pelo(a)
+    Nome do Departamento
+    , na função de
+    MONITOR
+    ,
+            com frequência
+    97
+    %.
+            A atividade foi realizada no período de
+    Data Inicial
+    a
+    Data Final
+    .
+   </p>
+   <p id="local_data">
+    Brasília,
+    20 de Janeiro de 2023
+   </p>
+   <div id="informacoes_adicionais">
+    <p class="texto_adicional">
+     Nome Decana
+    </p>
+    <p class="texto_adicional nao_negrito">
+     Decano(a) de Extensão
+    </p>
+   </div>
+  </main>
+ </body>
+</html>
