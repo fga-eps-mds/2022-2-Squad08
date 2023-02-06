@@ -61,7 +61,15 @@
 
 #### Biblioteca para Criação do Ambiente Virtual e Gestão de Pacotes:
 <ul>
-    <li>Poetry: 1.3.2</li>
+  <li>Poetry: 1.3.2</li>
+</ul>
+
+<br>
+
+#### Bibliotecas para Cobrimento de Testes
+<ul>
+  <li>Pytest: 7.2.1</li>
+  <li>Coverage: 7.1.0</li>
 </ul>
 
 <br>
