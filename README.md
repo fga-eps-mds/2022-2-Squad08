@@ -115,11 +115,15 @@ Testado no:
 pip install certifik8
 ```
 
-2. **Comando para acessar tutorial da aplicação**
+2. **Comando para instalar as dependências não presentes no Pypi**
+```
+certifik8 --install
+```
+3. **Comando para acessar tutorial da aplicação**
 ```
 certifik8 --h
 ```	
-3. **As tabelas dos cursos devem seguir uma padronização, caso contrário elas não irão gerar certificados:**
+4. **As tabelas dos cursos devem seguir uma padronização, caso contrário elas não irão gerar certificados:**
 * Estrutura da tabela Excel ([Exemplo](Certifik8/examples/completa.xlsx)): 
 
 | 1 |           Nome             |       CPF      |    Função    | Frequência |     Informações    |
@@ -135,18 +139,18 @@ certifik8 --h
 
 *Obs.: As tabelas devem possuir essas cinco colunas com os mesmos nomes e em qualquer ordem. A coluna informações deve possuir seis linhas, e seus dados devem seguir a ordem da tabela de exemplo abaixo
 
-4. **Comando para rodar a aplicação**
+5. **Comando para rodar a aplicação**
 ```
 certifik8
 ```
 
-5. **Selecione as tabelas que possuem as informações do certificado:**
+6. **Selecione as tabelas que possuem as informações do certificado:**
 <div align="center">
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_tabela.png" width="800">
 </div>
 
 
-6. **Selecione a pasta onde deseja guardar os certificados:**
+7. **Selecione a pasta onde deseja guardar os certificados:**
 <div align="center">
 <img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_pastas.png" width="800">
 </div>
@@ -162,18 +166,25 @@ certifik8
 ```
 git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 ```
+2. **Para instalar as dependências não advindas do Pypi, abra o repositório em seu computador e rode o comando:**
+```
+cd Certifik8/installer
+```
+```
+./dependencies.sh
+```
 
-2. **Para instalar as dependências no ambiente virtual, rode os comandos:**
+2. **Para instalar as dependências no ambiente virtual, rode o comando no diretório raiz:**
 ```
 poetry install
 ```
 	
-3 **Comando para acessar tutorial da aplicação**
+3 **Para acessar tutorial da aplicação, rode o comando no diretório raiz:**
 ```
 poetry run certifik8 --h
 ```	
 	
-4 **Comando para rodar a aplicação**
+4 **Para rodar a aplicação no diretório raiz:**
 ```
 poetry run certifik8
 ```
