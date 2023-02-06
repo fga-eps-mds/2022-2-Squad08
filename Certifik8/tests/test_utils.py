@@ -48,8 +48,7 @@ def test_foldername():
         "completa"
     """
 
-    assert get_foldername(
-        "/home/Certifik8/examples/completa.xlsx") == "completa"
+    assert get_foldername("/home/Certifik8/examples/completa.xlsx") == "completa"
 
 
 def test_utils_verificar_xlsx():
@@ -83,5 +82,4 @@ def test_utils_verificar_xlsx_erro():
         não é um arquivo XLSX válido.
     """
 
-    assert not verificar_xlsx(
-        path_inicial + "/examples/Melissa Ribeiro Araujo.html")
+    assert not verificar_xlsx(path_inicial + "/examples/Melissa Ribeiro Araujo.html")

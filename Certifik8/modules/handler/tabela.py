@@ -121,9 +121,7 @@ class Tabela:
 
             return True
         except ValueError:
-            print(
-                f"{self.path} - tabela vazia, " "certificados não gerados!!!"
-            )
+            print(f"{self.path} - tabela vazia, " "certificados não gerados!!!")
             return False
         except KeyError:
             print(
@@ -154,11 +152,11 @@ class Tabela:
         self.data_frame_funcao.drop_duplicates(keep="first", inplace=True)
 
     def get_data_frame(self):
-        """ Retorna a tabela completa """
+        """Retorna a tabela completa"""
         return self.data_frame
 
     def get_data_frame_informacoes(self):
-        """ Retorna a tabela com as informações do evento """
+        """Retorna a tabela com as informações do evento"""
         return self.data_frame_informacoes
 
     def verificar_tab_padrao(self, folder_destino):
@@ -196,6 +194,7 @@ class Tabela:
             )
             return False
         except IndexError:
-            print(f"{self.path} - coluna está faltando, " "certificados não "
-                  "gerados!!!")
+            print(
+                f"{self.path} - coluna está faltando, " "certificados não " "gerados!!!"
+            )
             return False
