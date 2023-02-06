@@ -58,10 +58,6 @@
 </details>
 
 ## 📝 Sobre o projeto
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ddab90 (Atualizações README)
 Certifik8 é um gerador de certificados automático criado em Python. O projeto busca facilitar a geração massiva de documentos a serem emitidos após algum evento ou curso na Semana Universitária da UnB. 
 
 ## 💻 Tecnologias
@@ -114,41 +110,17 @@ Testado no:
 
 ### **- 👩‍🦰 Usuário**
 
-1. **Instalando o Certifik8:**
-
+1. **Abra seu terminal e digite o comando para instalar o Certifik8 do Pypi:**
 ```
 pip install certifik8
 ```
 
-
-2. **Selecione as tabelas que possuem as informações do certificado:**
-<div align="center">
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_tabela.png" width="800">
-</div>
-
-
-3. **Selecione a pasta onde deseja guardar os certificados:**
-<div align="center">
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_pastas.png" width="800">
-</div>
-
-
-4. **Executando a aplicação:**
-<div id="gerando_certificados"><div>
-Faça os passos:
-<<<<<<< HEAD
-
->>>>>>> 44d9fb2 ((#73) Atualizações na documentação da aplicação no README)
-=======
->>>>>>> 7ddab90 (Atualizações README)
-1. Digite o comando "certifik8" para inicializar a aplicação;
-2. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
-3. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
-4. Clique em OK para realizar a geração e assim os certificados serão gerados para a pasta escolhida;
-5. Depois da aplicação ter finalizado sua execução, os certificados estarão alocados na pasta previamente escolhida pelo usuário, com cada tabela escolhida possuindo uma pasta e cada pasta estará dividida em subpastas de acordo com a função do indivíduo.
+2. **Comando para acessar tutorial da aplicação**
+```
+certifik8 --h
+```	
+3. **As tabelas dos cursos devem seguir uma padronização, caso contrário elas não irão gerar certificados:**
 * Estrutura da tabela Excel ([Exemplo](Certifik8/examples/completa.xlsx)): 
-  - Obs: a tabela deve possuir obrigatoriamente essas 5 colunas em qualquer ordem, além disso a coluna informações deve possuir obrigatoriamente sete linhas e suas informações devem respeitar a ordem abaixo
-
 
 | 1 |           Nome             |       CPF      |    Função    | Frequência |     Informações    |
 |---|----------------------------|----------------|--------------|------------|--------------------|
@@ -161,11 +133,25 @@ Faça os passos:
 | 8 |           ...              |      ...       |     ...      |    ...     |Nome Decano(a)      |
 |...|           ...              |      ...       |     ...      |    ...     |                    |
 
+*Obs.: As tabelas devem possuir essas cinco colunas com os mesmos nomes e em qualquer ordem. A coluna informações deve possuir seis linhas, e seus dados devem seguir a ordem da tabela de exemplo abaixo
+
+4. **Comando para rodar a aplicação**
+```
+certifik8
+```
+
+5. **Selecione as tabelas que possuem as informações do certificado:**
 <div align="center">
+<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_tabela.png" width="800">
+</div>
 
-*Demonstração de funcionalidade.*
 
-<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/docs/imagens/demonstracao.png" width="500" height="300">
+6. **Selecione a pasta onde deseja guardar os certificados:**
+<div align="center">
+<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/flag-help/docs/imagens/escolhe_pastas.png" width="800">
+</div>
+
+<div align="center">
 
 </div>
 	
@@ -177,25 +163,21 @@ Faça os passos:
 git clone https://github.com/fga-eps-mds/2022-2-Certifik8.git
 ```
 
-2. **Rode os comandos:**
-
+2. **Para instalar as dependências no ambiente virtual, rode os comandos:**
 ```
 poetry install
 ```
-
-2.2 **Comando que roda a aplicação**
+	
+3 **Comando para acessar tutorial da aplicação**
+```
+poetry run certifik8 --h
+```	
+	
+4 **Comando para rodar a aplicação**
 ```
 poetry run certifik8
 ```
 
-2.2.1 **Caso deseje gerar certificados**
-
-<div>Siga para o <a src="gerando_certificados">tutorial do usuário</a> caso deseje aprender a gerar certificados pela aplicação</div>
-
-2.3 **Comando para acessar tutorial da aplicação**
-```
-poetry run certifik8 --h
-```
 
 ## 👨‍💻 Desenvolvedores
 
