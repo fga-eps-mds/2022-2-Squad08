@@ -4,11 +4,12 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 O Certifik8 necessita de apenas uma entrada de dados, uma tabela (Excel) no formato xlsx. Para cada conjunto de informações passadas, um documento com um modelo já preestabelecido é gerado. Os certificados em formato PDF são salvos diretamente numa pasta escolhidada pelo usuário.
 
 Como executar/rodar:
-1. Digite o comando "certifik8" para inicializar a aplicação;
-2. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
-3. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
-4. Clique em OK para realizar a geração e assim os certificados serão gerados para a pasta escolhida;
-5. Depois da aplicação ter finalizado sua execução, os certificados estarão alocados na pasta previamente escolhida pelo usuário, com cada tabela escolhida possuindo uma pasta e cada pasta estará dividida em subpastas de acordo com a função do indivíduo.
+1. Digite o comando "certifik8 --install" para instalar as dependências não advindas do Pypi;
+2. Digite o comando "certifik8" para executar a aplicação;
+3. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
+4. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 
+5. Clique em OK para realizar a geração e assim os certificados serão gerados para a pasta escolhida;
+6. Depois da aplicação ter finalizado sua execução, os certificados estarão alocados na pasta previamente escolhida pelo usuário, com cada tabela escolhida possuindo uma pasta e cada pasta estará dividida em subpastas de acordo com a função do indivíduo.
 
 Estrutura da tabela Excel: 
 - Obs: a tabela deve possuir obrigatoriamente essas 5 colunas em qualquer ordem, além disso a coluna informações deve possuir obrigatoriamente sete linhas e suas informações devem respeitar a ordem abaixo
