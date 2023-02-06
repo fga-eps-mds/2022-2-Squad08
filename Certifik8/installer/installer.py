@@ -6,5 +6,5 @@ def installer():
     Instala dependências necessárias para o funcionamento da aplicação.
     """
 
-    comando = ['./dependencies.sh']
+    comando = ["./dependencies.sh"]
     subprocess.call(comando)

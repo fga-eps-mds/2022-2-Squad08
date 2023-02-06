@@ -32,11 +32,7 @@ class Html2Pdf:
         }
         self.new_path = ""
 
-    def convert(self,
-                output_name,
-                foldername,
-                folder_destino,
-                output_funcao) -> None:
+    def convert(self, output_name, foldername, folder_destino, output_funcao) -> None:
         """
         Converte o arquivo HTML em PDF e o salva no caminho especificado.
 
@@ -49,10 +45,7 @@ class Html2Pdf:
         caso contrário.
         """
 
-        self.new_path = folder_destino \
-            + "/" \
-            + f"{foldername}" \
-            + "/" + output_funcao
+        self.new_path = folder_destino + "/" + f"{foldername}" + "/" + output_funcao
         try:
             pdfkit.from_file(
                 self.html2pdf,

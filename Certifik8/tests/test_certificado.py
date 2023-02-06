@@ -43,8 +43,7 @@ def test_substituir_span_erro():
     ) as html:
         certificado.template = html.read()
     certificado.soup = BeautifulSoup(certificado.template, "html.parser")
-    assert not certificado.substituir_span(
-        "nome_participante", "Melissa Ribeiro")
+    assert not certificado.substituir_span("nome_participante", "Melissa Ribeiro")
 
 
 def test_gerar_certificados():

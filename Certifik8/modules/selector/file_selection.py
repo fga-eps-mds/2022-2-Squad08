@@ -31,9 +31,7 @@ class FileSelection:
         """
 
         try:
-            zenity = subprocess.run(self.command,
-                                    capture_output=True,
-                                    check=False)
+            zenity = subprocess.run(self.command, capture_output=True, check=False)
 
             filenames = str(zenity.stdout.decode("utf-8"))
             filenames = filenames.split("|")

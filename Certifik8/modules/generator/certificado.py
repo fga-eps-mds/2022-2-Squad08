@@ -91,8 +91,7 @@ class Certificados:
                     "nome_participante": data_frame["Nome"][i],
                     "cpf_participante": data_frame["CPF"][i],
                     "cargo_participante": data_frame["Função"][i],
-                    "frequencia_participante":
-                        str(data_frame["Frequência"][i]),
+                    "frequencia_participante": str(data_frame["Frequência"][i]),
                     "nome_evento": data_frame_informacoes.iloc[0, 0],
                     "carga_hor": data_frame_informacoes.iloc[1, 0],
                     "nome_prof": data_frame_informacoes.iloc[2, 0],
@@ -126,6 +125,5 @@ class Certificados:
             except KeyboardInterrupt:
                 return False
             finally:
-                os.remove(str(dados_certificado["nome_participante"])
-                          + ".html")
+                os.remove(str(dados_certificado["nome_participante"]) + ".html")
         return True

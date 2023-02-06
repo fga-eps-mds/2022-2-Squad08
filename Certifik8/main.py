@@ -1,3 +1,4 @@
+import argparse
 import time
 from .modules.generator.certificado import Certificados
 from .modules.handler.tabela import Tabela
@@ -5,6 +6,7 @@ from .path import path_inicial
 from .modules.utils import verificar_xlsx
 from .modules.selector.file_selection import FileSelection
 from .modules.selector.folder_selection import FolderSelection
+from .installer.installer import installer
 
 
 def run():
@@ -16,6 +18,23 @@ def run():
         3. Seleção da pasta destino para salvar os certificados
         4. Chama as funções de geração de certificados
     """
+
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("-h", "--help", help="Como usar", action="store_true")
+    parser.add_argument("--install", help="Instalar dependências", action="store_true")
+    args = parser.parse_args()
+
+    if args.help:
+        with open(
+            file=path_inicial + "/constants/help.txt",
+            encoding="utf-8",
+        ) as text_help:
+            msg_help = text_help.read()
+        print(msg_help)
+        exit()
+    elif args.install:
+        installer()
+        exit()
 
     with open(
         file=path_inicial + "/constants/menu.txt",
