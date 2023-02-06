@@ -75,9 +75,11 @@
 <br>
 
 #### Diagrama de Arquivos
-<a href="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/docs_tecnica/docs/Diagrama%20de%20Arquivos.png">
-		<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/docs_tecnica/docs/Diagrama%20de%20Arquivos.png"/>
-	</a>
+<div align="center">
+<a href="https://github.com/fga-eps-mds/2022-2-Certifik8">
+	<img src="https://github.com/fga-eps-mds/2022-2-Certifik8/blob/docs_tecnica/docs/DiagramadeArquivos.png" width="600" height="600"/>
+</a>
+</div>
 
 #### Onde se está dispovível para Utilização:
 
