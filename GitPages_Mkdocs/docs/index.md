@@ -4,13 +4,24 @@ hide:
   - toc
 ---
 
-# 2022-2-Certifik8
+<div style="text-align:center;  margin: 0px; ">
+  <img src="img/nome_logo.png" style="margin: 0px"/>
+</div>
+
+<style>
+  .md-content__button {
+    display: none;
+  }
+</style>
 ---
 <center>
 
 [![Contributors](https://img.shields.io/github/contributors/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/issues)
 [![MIT License](https://img.shields.io/github/license/fga-eps-mds/2022-2-Certifik8.svg?style=for-the-badge&color=e703f7)](https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/LICENSE)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e00e7a4c51d3c657319d/maintainability)](https://codeclimate.com/github/fga-eps-mds/2022-2-Certifik8/maintainability) 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e00e7a4c51d3c657319d/test_coverage)](https://codeclimate.com/github/fga-eps-mds/2022-2-Certifik8/test_coverage)
+
 
 </center>
 
@@ -29,12 +40,14 @@ hide:
 </center>
 
 <center>
-#Certifik8
+#Gerador Automático de Certificados
 </center>
 
 <center>
-Gerador Automático de Certificados 
 
+<center>
+#Grupo 8
+</center>
 [Documentos](docs)
 [Reportar Bug](https://github.com/fga-eps-mds/2022-2-Certifik8/blob/main/SECURITY.md)
 [Recomendar Feature](https://github.com/fga-eps-mds/2022-2-Certifik8/issues)
@@ -96,32 +109,11 @@ Testado no:
 
 ![Ubuntu](https://img.shields.io/static/v1?style=for-the-badge&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=FFFFFF&label=)
 
-
-
 **Para conseguir executá-lo, o usuário precisa instalar:**
 
-  - **Python3 e Pip**
-```
-sudo apt install python3 && sudo apt install python3-pip
-```
- 
-  - **As bibliotecas pdfkit, BeautifulSoup e Pandas**
-```
-pip install pdfkit
-```
-
-```
-pip install beautifulsoup4
-```
-
-```
-pip install pandas
-```
-
-  - **Instalar a ferramenta wkhtmltopdf**
-```
-sudo apt install wkhtmltopdf
-```
+   - **Python3 e Pip**
+   
+        sudo apt install python3 && sudo apt install python3-pip
 
 ## 🛞 Como executar/rodar
 ---
