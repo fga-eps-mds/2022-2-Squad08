@@ -4,7 +4,11 @@ Certifik8 é um gerador de certificados automático criado em Python. O projeto 
 O Certifik8 necessita de apenas uma entrada de dados, uma tabela (Excel) no formato xlsx. Para cada conjunto de informações passadas, um documento com um modelo já preestabelecido é gerado. Os certificados em formato PDF são salvos diretamente numa pasta escolhidada pelo usuário.
 
 Como executar/rodar:
-1. Digite o comando "certifik8 --install" para instalar as dependências não advindas do Pypi;
+1. Digite os comando abaixo para instalar as dependências não advindas do Pypi:
+    - "sudo apt-get update -y"
+    - "sudo apt-get install -y zlib1g fontconfig libxrender1 libfreetype6 libxext6 libx11-6"
+    - "sudo apt install -y wkhtmltopdf"
+    - "sudo apt-get install -y zenity" 
 2. Digite o comando "certifik8" para executar a aplicação;
 3. O gerenciador de arquivos é aberto e o usuário pode escolher quantas tabelas quiser para gerar os certificados;
 4. O gerenciador de arquivos é aberto novamente e o usuário pode escolher em qual pasta deseja guardar os certificados; 

@@ -115,9 +115,18 @@ Testado no:
 pip install certifik8
 ```
 
-2. **Comando para instalar as dependências não presentes no Pypi**
+2. **Comandos para instalar as dependências não presentes no Pypi**
 ```
-certifik8 --install
+sudo apt-get update -y
+```
+```
+sudo apt-get install -y zlib1g fontconfig libxrender1 libfreetype6 libxext6 libx11-6
+```
+```
+sudo apt install -y wkhtmltopdf
+```
+```
+sudo apt-get install -y zenity
 ```
 3. **Comando para acessar tutorial da aplicação**
 ```
