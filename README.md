@@ -146,7 +146,7 @@ certifik8 --h
 | 8 |           ...              |      ...       |     ...      |    ...     |Nome Decano(a)      |
 |...|           ...              |      ...       |     ...      |    ...     |                    |
 
-*Obs.: As tabelas devem possuir essas cinco colunas com os mesmos nomes e em qualquer ordem. A coluna informações deve possuir seis linhas, e seus dados devem seguir a ordem da tabela de exemplo abaixo
+*Obs.: As tabelas devem possuir essas cinco colunas com os mesmos nomes e em qualquer ordem, com exceção da coluna **Informações**, que apesar de poder de estar em qualquer posição, deve possuir seis linhas e seus dados devem seguir a ordem da tabela de exemplo acima
 
 5. **Comando para rodar a aplicação**
 ```
